@@ -1,62 +1,66 @@
 ﻿/*
     Nome: Thais Barbosa dos Santos
-    Data: 09/08/2024
 */
 
 using System;
-class Program
+
+namespace SistemaGeladeira
 {
-    static void Main()
+    class Program
     {
-        string[,,] itensGeladeira = new string[3, 2, 4];
-
-        // Andar Inicial
-        itensGeladeira[0, 0, 0] = "Ameixa";
-        itensGeladeira[0, 0, 1] = "Banana";
-        itensGeladeira[0, 0, 2] = "Caju";
-        itensGeladeira[0, 0, 3] = "Damasco";
-
-        itensGeladeira[0, 1, 0] = "Alface";
-        itensGeladeira[0, 1, 1] = "Batata";
-        itensGeladeira[0, 1, 2] = "Jiló";
-        itensGeladeira[0, 1, 3] = "Tomate";
-
-        // Primeiro andar
-        itensGeladeira[1, 0, 0] = "Atum";
-        itensGeladeira[1, 0, 1] = "Leite";
-        itensGeladeira[1, 0, 2] = "Manteiga";
-        itensGeladeira[1, 0, 3] = "Requeijão";
-
-        itensGeladeira[1, 1, 0] = "Azeitona";
-        itensGeladeira[1, 1, 1] = "Ketchup";
-        itensGeladeira[1, 1, 2] = "Maionese";
-        itensGeladeira[1, 1, 3] = "Sardinha";
-
-        // Segundo andar
-        itensGeladeira[2, 0, 0] = "Mortadela";
-        itensGeladeira[2, 0, 1] = "Ovo";
-        itensGeladeira[2, 0, 2] = "Presunto";
-        itensGeladeira[2, 0, 3] = "Queijo";
-
-        itensGeladeira[2, 1, 0] = "Bacon";
-        itensGeladeira[2, 1, 1] = "Bife";
-        itensGeladeira[2, 1, 2] = "Linguiça";
-        itensGeladeira[2, 1, 3] = "Salame";
-
-        listarItens(itensGeladeira);
-    }
-    
-    static void listarItens(string[,,] itensGeladeira)
-    {
-        for (int a = 0; a < 3; a++)
+        static void Main()
         {
-            for (int c = 0; c < 2; c++) 
-            {
-                for (int p = 0; p < 4; p++)
-                {
-                    Console.WriteLine($"Andar: {a}, Container: {c}, Posição: {p}, Item: {itensGeladeira[a, c, p]}");
-                }
-            }
+            Geladeira geladeira = new Geladeira(3, 2, 4);
+
+            AdicionarItens(geladeira);
+            ListarItens(geladeira);
+        }
+
+        static void AdicionarItens(Geladeira geladeira)
+        {
+            // Andar inicial
+            AdicionarItem(geladeira, 0, 0, 0, "Ameixa");
+            AdicionarItem(geladeira, 0, 0, 1, "Banana");
+            AdicionarItem(geladeira, 0, 0, 2, "Caju");
+            AdicionarItem(geladeira, 0, 0, 3, "Damasco");
+
+            AdicionarItem(geladeira, 0, 1, 0, "Alface");
+            AdicionarItem(geladeira, 0, 1, 1, "Batata");
+            AdicionarItem(geladeira, 0, 1, 2, "Jiló");
+            AdicionarItem(geladeira, 0, 1, 3, "Tomate");
+
+            // Primeiro andar
+            AdicionarItem(geladeira, 1, 0, 0, "Atum");
+            AdicionarItem(geladeira, 1, 0, 1, "Leite");
+            AdicionarItem(geladeira, 1, 0, 2, "Manteiga");
+            AdicionarItem(geladeira, 1, 0, 3, "Requeijão");
+
+            AdicionarItem(geladeira, 1, 1, 0, "Azeitona");
+            AdicionarItem(geladeira, 1, 1, 1, "Ketchup");
+            AdicionarItem(geladeira, 1, 1, 2, "Maionese");
+            AdicionarItem(geladeira, 1, 1, 3, "Sardinha");
+
+            // Segundo andar
+            AdicionarItem(geladeira, 2, 0, 0, "Mortadela");
+            AdicionarItem(geladeira, 2, 0, 1, "Ovo");
+            AdicionarItem(geladeira, 2, 0, 2, "Presunto");
+            AdicionarItem(geladeira, 2, 0, 3, "Queijo");
+
+            AdicionarItem(geladeira, 2, 1, 0, "Bacon");
+            AdicionarItem(geladeira, 2, 1, 1, "Bife");
+            AdicionarItem(geladeira, 2, 1, 2, "Linguiça");
+            AdicionarItem(geladeira, 2, 1, 3, "Salame");
+        }
+
+        static void AdicionarItem(Geladeira geladeira, int andar, int container, int posicao, string item)
+        {
+            geladeira.Andares[andar].AdicionarItem(container, posicao, item);
+        }
+
+        static void ListarItens(Geladeira geladeira)
+        {
+            Console.WriteLine("Itens na geladeira:");
+            geladeira.ListarItens();
         }
     }
 }
