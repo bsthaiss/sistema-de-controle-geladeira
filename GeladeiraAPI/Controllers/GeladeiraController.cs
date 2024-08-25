@@ -2,6 +2,10 @@
 using SistemaGeladeira;
 using System.Collections.Generic;
 
+/*
+    Nome: Thais Barbosa dos Santos
+ */
+
 namespace GeladeiraAPI.Controllers
 {
     [Route("api/[controller]")]
