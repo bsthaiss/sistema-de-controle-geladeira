@@ -1,0 +1,146 @@
+[
+  {
+    "ContainingType": "GeladeiraAPI.Controllers.GeladeiraController",
+    "Method": "Get",
+    "RelativePath": "api/Geladeira",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GeladeiraAPI.Controllers.GeladeiraController",
+    "Method": "Get",
+    "RelativePath": "api/Geladeira/{andar}/{container}/{posicao}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "andar",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "container",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "posicao",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GeladeiraAPI.Controllers.GeladeiraController",
+    "Method": "Post",
+    "RelativePath": "api/Geladeira/{andar}/{container}/{posicao}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "andar",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "container",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "posicao",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "item",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GeladeiraAPI.Controllers.GeladeiraController",
+    "Method": "Put",
+    "RelativePath": "api/Geladeira/{andar}/{container}/{posicao}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "andar",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "container",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "posicao",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "item",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GeladeiraAPI.Controllers.GeladeiraController",
+    "Method": "Delete",
+    "RelativePath": "api/Geladeira/{andar}/{container}/{posicao}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "andar",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "container",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "posicao",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
