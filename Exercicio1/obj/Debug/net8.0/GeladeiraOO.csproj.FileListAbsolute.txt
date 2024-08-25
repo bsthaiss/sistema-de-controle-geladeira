@@ -1,0 +1,15 @@
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\bin\Debug\net8.0\GeladeiraOO.exe
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\bin\Debug\net8.0\GeladeiraOO.deps.json
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\bin\Debug\net8.0\GeladeiraOO.runtimeconfig.json
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\bin\Debug\net8.0\GeladeiraOO.dll
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\bin\Debug\net8.0\GeladeiraOO.pdb
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\obj\Debug\net8.0\GeladeiraOO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\obj\Debug\net8.0\GeladeiraOO.AssemblyInfoInputs.cache
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\obj\Debug\net8.0\GeladeiraOO.AssemblyInfo.cs
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\obj\Debug\net8.0\GeladeiraOO.csproj.CoreCompileInputs.cache
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\obj\Debug\net8.0\GeladeiraOO.sourcelink.json
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\obj\Debug\net8.0\GeladeiraOO.dll
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\obj\Debug\net8.0\refint\GeladeiraOO.dll
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\obj\Debug\net8.0\GeladeiraOO.pdb
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\obj\Debug\net8.0\GeladeiraOO.genruntimeconfig.cache
+C:\Users\rosin\Source\Repos\sistema-de-controle-geladeira\Exercicio1\obj\Debug\net8.0\ref\GeladeiraOO.dll

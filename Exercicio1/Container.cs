@@ -5,7 +5,7 @@ namespace SistemaGeladeira
 {
     public class Container
     {
-        private List<string> Itens { get; set; }
+        public List<string> Itens { get; set; }
 
         public Container(int numeroPosicoes)
         {
@@ -54,10 +54,10 @@ namespace SistemaGeladeira
 
         public void ListarItens()
         {
-            for (int i = 0; i < Itens.Count; i++)
+            for (int contador = 0; contador < Itens.Count; contador++)
             {
-                string item = Itens[i] ?? "vazio";
-                Console.WriteLine($"Posição {i}: {item}");
+                string item = Itens[contador] ?? "vazio";
+                Console.WriteLine($"Posição {contador}: {item}");
             }
         }
     }

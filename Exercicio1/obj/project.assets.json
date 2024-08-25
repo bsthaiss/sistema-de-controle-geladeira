@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rosin\\Source\\Repos\\sistema-de-controle-geladeira\\Exercicio1\\Exercicio1.csproj",
-      "projectName": "Exercicio1",
-      "projectPath": "C:\\Users\\rosin\\Source\\Repos\\sistema-de-controle-geladeira\\Exercicio1\\Exercicio1.csproj",
+      "projectUniqueName": "C:\\Users\\rosin\\Source\\Repos\\sistema-de-controle-geladeira\\Exercicio1\\GeladeiraOO.csproj",
+      "projectName": "GeladeiraOO",
+      "projectPath": "C:\\Users\\rosin\\Source\\Repos\\sistema-de-controle-geladeira\\Exercicio1\\GeladeiraOO.csproj",
       "packagesPath": "C:\\Users\\rosin\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\rosin\\Source\\Repos\\sistema-de-controle-geladeira\\Exercicio1\\obj\\",
       "projectStyle": "PackageReference",

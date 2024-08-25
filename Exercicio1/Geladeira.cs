@@ -11,7 +11,7 @@ namespace SistemaGeladeira
         {
             Andares = new List<Andar>();
 
-            for (int i = 0; i < numeroAndares; i++)
+            for (int contador = 0; contador < numeroAndares; contador++)
             {
                 Andares.Add(new Andar(numeroContainers, numeroPosicoes));
             }
@@ -19,10 +19,10 @@ namespace SistemaGeladeira
 
         public void ListarItens()
         {
-            for (int i = 0; i < Andares.Count; i++)
+            for (int contador = 0; contador < Andares.Count; contador++)
             {
-                Console.WriteLine($"Andar {i + 1}:");
-                Andares[i].ListarItens();
+                Console.WriteLine($"Andar {contador + 1}:");
+                Andares[contador].ListarItens();
                 Console.WriteLine();
             }
         }
