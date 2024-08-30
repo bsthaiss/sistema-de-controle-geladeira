@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeladeiraOO", "Exercicio1\GeladeiraOO.csproj", "{6F0A029D-CDB7-44BD-BEC1-61C96AB15A96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeladeiraAPI", "GeladeiraAPI\GeladeiraAPI.csproj", "{DB7ADA13-8F4B-499F-92AE-7E606A21C7B0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F65A4ACA-9943-42EC-AA95-C3C0D1779061} = {F65A4ACA-9943-42EC-AA95-C3C0D1779061}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeladeiraAPI", "GeladeiraAPI\GeladeiraAPI.csproj", "{DB7ADA13-8F4B-499F-92AE-7E606A21C7B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstruturaGeladeira", "EstruturaGeladeira\EstruturaGeladeira.csproj", "{F65A4ACA-9943-42EC-AA95-C3C0D1779061}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geladeira", "Geladeira\Geladeira.csproj", "{1D447C50-10C6-4A6D-B731-C51F77E2F50A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +18,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6F0A029D-CDB7-44BD-BEC1-61C96AB15A96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F0A029D-CDB7-44BD-BEC1-61C96AB15A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F0A029D-CDB7-44BD-BEC1-61C96AB15A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F0A029D-CDB7-44BD-BEC1-61C96AB15A96}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DB7ADA13-8F4B-499F-92AE-7E606A21C7B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB7ADA13-8F4B-499F-92AE-7E606A21C7B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB7ADA13-8F4B-499F-92AE-7E606A21C7B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB7ADA13-8F4B-499F-92AE-7E606A21C7B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F65A4ACA-9943-42EC-AA95-C3C0D1779061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F65A4ACA-9943-42EC-AA95-C3C0D1779061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F65A4ACA-9943-42EC-AA95-C3C0D1779061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F65A4ACA-9943-42EC-AA95-C3C0D1779061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D447C50-10C6-4A6D-B731-C51F77E2F50A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D447C50-10C6-4A6D-B731-C51F77E2F50A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D447C50-10C6-4A6D-B731-C51F77E2F50A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D447C50-10C6-4A6D-B731-C51F77E2F50A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

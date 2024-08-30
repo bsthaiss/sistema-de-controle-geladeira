@@ -89,14 +89,14 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "GeladeiraOO/1.0.0": {
+      "EstruturaGeladeira/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/GeladeiraOO.dll": {}
+          "bin/placeholder/EstruturaGeladeira.dll": {}
         },
         "runtime": {
-          "bin/placeholder/GeladeiraOO.dll": {}
+          "bin/placeholder/EstruturaGeladeira.dll": {}
         }
       }
     }
@@ -431,15 +431,15 @@
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
-    "GeladeiraOO/1.0.0": {
+    "EstruturaGeladeira/1.0.0": {
       "type": "project",
-      "path": "../Exercicio1/GeladeiraOO.csproj",
-      "msbuildProject": "../Exercicio1/GeladeiraOO.csproj"
+      "path": "../EstruturaGeladeira/EstruturaGeladeira.csproj",
+      "msbuildProject": "../EstruturaGeladeira/EstruturaGeladeira.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "GeladeiraOO >= 1.0.0",
+      "EstruturaGeladeira >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -450,9 +450,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rosin\\Source\\Repos\\sistema-de-controle-geladeira\\GeladeiraAPI\\GeladeiraAPI.csproj",
+      "projectUniqueName": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\GeladeiraAPI\\GeladeiraAPI.csproj",
       "projectName": "GeladeiraAPI",
-      "projectPath": "C:\\Users\\rosin\\Source\\Repos\\sistema-de-controle-geladeira\\GeladeiraAPI\\GeladeiraAPI.csproj",
+      "projectPath": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\GeladeiraAPI\\GeladeiraAPI.csproj",
       "packagesPath": "C:\\Users\\rosin\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\GeladeiraAPI\\obj\\",
       "projectStyle": "PackageReference",
@@ -476,8 +476,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\rosin\\Source\\Repos\\sistema-de-controle-geladeira\\Exercicio1\\GeladeiraOO.csproj": {
-              "projectPath": "C:\\Users\\rosin\\Source\\Repos\\sistema-de-controle-geladeira\\Exercicio1\\GeladeiraOO.csproj"
+            "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\EstruturaGeladeira\\EstruturaGeladeira.csproj": {
+              "projectPath": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\EstruturaGeladeira\\EstruturaGeladeira.csproj"
             }
           }
         }
