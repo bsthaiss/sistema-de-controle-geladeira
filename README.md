@@ -17,3 +17,13 @@ CREATE TABLE ItensGeladeira (
     Posicao INT NOT NULL
 );
 ```
+
+Comando feito no Scaffold:
+
+```
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=GeladeiraDB;Uid=sa;Pwd=123;Trusted_Connection=True;TrustServerCertificate=True;"
+  }
+}
+```
