@@ -1502,6 +1502,16 @@
             "rid": "win"
           }
         }
+      },
+      "EstruturaGeladeira/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EstruturaGeladeira.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EstruturaGeladeira.dll": {}
+        }
       }
     }
   },
@@ -4096,10 +4106,16 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "EstruturaGeladeira/1.0.0": {
+      "type": "project",
+      "path": "../EstruturaGeladeira/EstruturaGeladeira.csproj",
+      "msbuildProject": "../EstruturaGeladeira/EstruturaGeladeira.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "EstruturaGeladeira >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.8"
     ]
@@ -4136,7 +4152,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\EstruturaGeladeira\\EstruturaGeladeira.csproj": {
+              "projectPath": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\EstruturaGeladeira\\EstruturaGeladeira.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

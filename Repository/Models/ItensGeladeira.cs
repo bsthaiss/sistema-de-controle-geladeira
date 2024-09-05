@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Repository.Models;
 
-public partial class ItensGeladeira
+public class ItensGeladeira
 {
     public int Id { get; set; }
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GeladeiraAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d938c97221405bb0cf71990458cc1be4d6d0ba8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e7aac2a8bb7471890fe2155144a5e2e189bf0cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("GeladeiraAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GeladeiraAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

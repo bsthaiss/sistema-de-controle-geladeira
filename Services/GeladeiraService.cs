@@ -1,6 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
-using Repository.Models;
-using System;
+﻿using Repository.Models;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -15,126 +13,35 @@ namespace Services
             _contexto = contexto;
         }
 
-        public string AdicionarItem(ItensGeladeira item)
+        public IEnumerable<ItensGeladeira> ListarTodosItens()
         {
-            if (item == null)
-            {
-                return "Item inválido!";
-            }
-
-            try
-            {
-                var itemExistente = _contexto.ItensGeladeiras
-                    .FirstOrDefault(i => i.Andar == item.Andar && i.Container == item.Container && i.Posicao == item.Posicao);
-
-                if (itemExistente == null)
-                {
-                    _contexto.ItensGeladeiras.Add(item);
-                    _contexto.SaveChanges();
-                    return "Item adicionado com sucesso!";
-                }
-                else
-                {
-                    return "Posição já ocupada!";
-                }
-            }
-            catch (SqlException)
-            {
-                return "Erro ao se comunicar com o banco de dados!";
-            }
-            catch (Exception ex)
-            {
-                return $"Erro: {ex.Message}";
-            }
+            return _contexto.ItensGeladeiras.ToList();
         }
 
-        public string AtualizarItem(ItensGeladeira item)
+        public ItensGeladeira? BuscarItem(int id)
         {
-            if (item == null)
-            {
-                return "Item inválido!";
-            }
-
-            try
-            {
-                var itemExistente = _contexto.ItensGeladeiras
-                    .FirstOrDefault(i => i.Andar == item.Andar && i.Container == item.Container && i.Posicao == item.Posicao);
-
-                if (itemExistente != null)
-                {
-                    itemExistente.Nome = item.Nome;
-                    _contexto.ItensGeladeiras.Update(itemExistente);
-                    _contexto.SaveChanges();
-                    return "Item atualizado com sucesso!";
-                }
-                else
-                {
-                    return "Item não encontrado!";
-                }
-            }
-            catch (SqlException)
-            {
-                return "Erro ao se comunicar com o banco de dados!";
-            }
-            catch (Exception ex)
-            {
-                return $"Erro: {ex.Message}";
-            }
+            return _contexto.ItensGeladeiras.Find(id);
         }
 
-        public ItensGeladeira BuscarItem(int idItem)
+        public void AdicionarItem(ItensGeladeira item)
         {
-            try
-            {
-                return _contexto.ItensGeladeiras.Find(idItem);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
+            _contexto.ItensGeladeiras.Add(item);
+            _contexto.SaveChanges();
         }
 
-        public List<ItensGeladeira> ListarTodosItens()
+        public void AtualizarItem(ItensGeladeira item)
         {
-            try
-            {
-                return _contexto.ItensGeladeiras.ToList();
-            }
-            catch (Exception)
-            {
-                return new List<ItensGeladeira>();
-            }
+            _contexto.ItensGeladeiras.Update(item);
+            _contexto.SaveChanges();
         }
 
-        public string RemoverItemPorId(int idItem)
+        public void RemoverItem(int id)
         {
-            if (idItem <= 0)
+            var item = _contexto.ItensGeladeiras.Find(id);
+            if (item != null)
             {
-                return "ID inválido! Tente novamente.";
-            }
-
-            try
-            {
-                var item = BuscarItem(idItem);
-
-                if (item != null)
-                {
-                    _contexto.ItensGeladeiras.Remove(item);
-                    _contexto.SaveChanges();
-                    return $"Item '{item.Nome}' removido com sucesso!";
-                }
-                else
-                {
-                    return "Item não encontrado!";
-                }
-            }
-            catch (SqlException)
-            {
-                return "Erro ao se comunicar com o banco de dados!";
-            }
-            catch (Exception ex)
-            {
-                return $"Erro: {ex.Message}";
+                _contexto.ItensGeladeiras.Remove(item);
+                _contexto.SaveChanges();
             }
         }
     }

@@ -1592,6 +1592,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "EstruturaGeladeira": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
         },
         "compile": {
@@ -1599,6 +1600,19 @@
         },
         "runtime": {
           "bin/placeholder/Repository.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
         }
       }
     }
@@ -4507,6 +4521,11 @@
       "type": "project",
       "path": "../Repository/Repository.csproj",
       "msbuildProject": "../Repository/Repository.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4515,6 +4534,7 @@
       "Microsoft.EntityFrameworkCore >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.8",
       "Repository >= 1.0.0",
+      "Services >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -4556,6 +4576,9 @@
             },
             "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\Repository\\Repository.csproj": {
               "projectPath": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\Repository\\Repository.csproj"
+            },
+            "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\Services\\Services.csproj"
             }
           }
         }

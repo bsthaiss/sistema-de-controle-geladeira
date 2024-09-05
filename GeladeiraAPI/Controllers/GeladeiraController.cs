@@ -1,6 +1,6 @@
-﻿using EstruturaGeladeira;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
+using Repository.Models;
+using Services;
 
 /*
     Nome: Thais Barbosa dos Santos
@@ -12,81 +12,81 @@ namespace GeladeiraAPI.Controllers
     [ApiController]
     public class GeladeiraController : ControllerBase
     {
-        private static readonly Geladeira _geladeira = new Geladeira(3, 2, 4);
+        private readonly GeladeiraService _service;
+
+        public GeladeiraController(GeladeiraService service)
+        {
+            _service = service;
+        }
 
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<ItensGeladeira>> Get()
         {
-            var itens = _geladeira.ListarItens();
-
-            if (itens.Count == 0)
-            {
-                return NotFound("Nenhum item encontrado na geladeira.");
-            }
-
+            var itens = _service.ListarTodosItens();
             return Ok(itens);
         }
 
-        [HttpGet("{andar}/{container}/{posicao}")]
-        public ActionResult<string> Get(int andar, int container, int posicao)
+        [HttpGet("{id}")]
+        public ActionResult<ItensGeladeira> Get(int id)
         {
-            if (andar < 0 || andar > _geladeira.Andares.Count ||
-                container < 0 || container > _geladeira.Andares[andar].Containers.Count ||
-                posicao < 0 || posicao > _geladeira.Andares[andar].Containers[container].Itens.Count)
+            var item = _service.BuscarItem(id);
+
+            if (item == null)
             {
                 return NotFound("Item não encontrado");
             }
 
-            var item = _geladeira.Andares[andar].Containers[container].Itens[posicao];
-            return string.IsNullOrEmpty(item) ? NotFound("Item não encontrado") : Ok($"Andar {andar}, Container {container}, Posição {posicao}: {item}");
+            return Ok(item);
         }
 
-        [HttpPost("{andar}/{container}/{posicao}")]
-        public ActionResult Post(int andar, int container, int posicao, [FromBody] string item)
+        [HttpPost]
+        public ActionResult Post([FromBody] ItensGeladeira item)
         {
-            if (andar < 0 || andar > _geladeira.Andares.Count ||
-                container < 0 || container > _geladeira.Andares[andar].Containers.Count ||
-                posicao < 0 || posicao > _geladeira.Andares[andar].Containers[container].Itens.Count)
+            if (item == null)
             {
-                return BadRequest("Erro! Posição não encontrada");
+                return BadRequest("Erro!");
             }
 
-            var posicaoAtual = _geladeira.Andares[andar].Containers[container].Itens[posicao];
-            if (!string.IsNullOrEmpty(posicaoAtual))
-            {
-                return Conflict("Posição já ocupada");
-            }
-
-            _geladeira.Andares[andar].AdicionarItem(container, posicao, item);
-            return Ok($"{item} adicionado com sucesso");
+            _service.AdicionarItem(item);
+            return Ok("Item adicionado com sucesso");
         }
 
-        [HttpPut("{andar}/{container}/{posicao}")]
-        public ActionResult Put(int andar, int container, int posicao, [FromBody] string item)
+        [HttpPut("{id}")]
+        public ActionResult Put(int id, [FromBody] ItensGeladeira item)
         {
-            if (andar < 0 || andar >= _geladeira.Andares.Count ||
-                container < 0 || container >= _geladeira.Andares[andar].Containers.Count ||
-                posicao < 0 || posicao >= _geladeira.Andares[andar].Containers[container].Itens.Count)
+
+            if (id != item.Id)
             {
-                return BadRequest("Erro! Posição inválida");
+                return BadRequest("Erro! Item inválido");
             }
 
-            _geladeira.Andares[andar].AdicionarItem(container, posicao, item);
+            var itemExiste = _service.BuscarItem(id);
+
+            if (itemExiste == null)
+            {
+                return NotFound();
+            }
+
+            _service.AtualizarItem(item);
             return Ok("Item atualizado com sucesso");
+
+
         }
 
-        [HttpDelete("{andar}/{container}/{posicao}")]
-        public ActionResult Delete(int andar, int container, int posicao)
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
         {
-            if (andar < 0 || andar > _geladeira.Andares.Count ||
-                container < 0 || container > _geladeira.Andares[andar].Containers.Count ||
-                posicao < 0 || posicao > _geladeira.Andares[andar].Containers[container].Itens.Count)
+            var itemExiste = _service.BuscarItem(id);
+
+            if (itemExiste == null)
             {
-                return BadRequest("Erro! Posição inválida");
+                return NotFound();
             }
 
-            _geladeira.Andares[andar].RemoverItem(container, posicao);
+            _service.RemoverItem(id);
             return Ok("Item removido com sucesso");
+
         }
+
     }
 }
