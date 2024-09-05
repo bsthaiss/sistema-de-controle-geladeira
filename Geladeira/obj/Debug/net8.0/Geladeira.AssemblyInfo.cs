@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Geladeira")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ff20f9c8816b80717f631a6328597e79ff493fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2c0f6e3b386de0340998243d52c638e17ec2cd7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Geladeira")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Geladeira")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

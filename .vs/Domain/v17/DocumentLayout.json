@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1D447C50-10C6-4A6D-B731-C51F77E2F50A}|Geladeira\\Geladeira.csproj|c:\\users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\geladeira\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D447C50-10C6-4A6D-B731-C51F77E2F50A}|Geladeira\\Geladeira.csproj|solutionrelative:geladeira\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C178DE4E-9AF5-4D47-BCB4-54E3A9748265}|Repository\\Repository.csproj|c:\\users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\repository\\models\\geladeiradbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C178DE4E-9AF5-4D47-BCB4-54E3A9748265}|Repository\\Repository.csproj|solutionrelative:repository\\models\\geladeiradbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C178DE4E-9AF5-4D47-BCB4-54E3A9748265}|Repository\\Repository.csproj|c:\\users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\repository\\models\\itensgeladeira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C178DE4E-9AF5-4D47-BCB4-54E3A9748265}|Repository\\Repository.csproj|solutionrelative:repository\\models\\itensgeladeira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ItensGeladeira.cs",
+              "DocumentMoniker": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\Repository\\Models\\ItensGeladeira.cs",
+              "RelativeDocumentMoniker": "Repository\\Models\\ItensGeladeira.cs",
+              "ToolTip": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\Repository\\Models\\ItensGeladeira.cs",
+              "RelativeToolTip": "Repository\\Models\\ItensGeladeira.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T17:31:37.71Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\Geladeira\\Program.cs",
-              "RelativeDocumentMoniker": "Geladeira\\Program.cs",
-              "ToolTip": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\Geladeira\\Program.cs",
-              "RelativeToolTip": "Geladeira\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Title": "GeladeiraDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\Repository\\Models\\GeladeiraDbContext.cs",
+              "RelativeDocumentMoniker": "Repository\\Models\\GeladeiraDbContext.cs",
+              "ToolTip": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\Repository\\Models\\GeladeiraDbContext.cs",
+              "RelativeToolTip": "Repository\\Models\\GeladeiraDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T21:35:30.725Z",
+              "WhenOpened": "2024-09-05T17:31:04.398Z",
               "EditorCaption": ""
             }
           ]

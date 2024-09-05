@@ -13,15 +13,8 @@
         {
             if (posicao >= 0 && posicao < Itens.Count)
             {
-                if (Itens[posicao] == null)
-                {
-                    Itens[posicao] = item;
-                    Console.WriteLine($"Item '{item}' adicionado na posição {posicao}.");
-                }
-                else
-                {
-                    Console.WriteLine("Posição já ocupada!");
-                }
+                Itens[posicao] = item;
+                Console.WriteLine($"Item '{item}' adicionado na posição {posicao}.");
             }
             else
             {
