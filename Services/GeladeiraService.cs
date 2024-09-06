@@ -29,10 +29,18 @@ namespace Services
             _contexto.SaveChanges();
         }
 
-        public void AtualizarItem(ItensGeladeira item)
+        public void AtualizarItem(ItensGeladeira itemAtualizado)
         {
-            _contexto.ItensGeladeiras.Update(item);
-            _contexto.SaveChanges();
+            var itemExistente = _contexto.ItensGeladeiras.Find(itemAtualizado.Id);
+
+            if (itemExistente != null)
+            {
+                itemExistente.Nome = itemAtualizado.Nome;
+                itemExistente.Andar = itemAtualizado.Andar;
+                itemExistente.Container = itemAtualizado.Container;
+                itemExistente.Posicao = itemAtualizado.Posicao;
+                _contexto.SaveChanges();
+            }
         }
 
         public void RemoverItem(int id)
