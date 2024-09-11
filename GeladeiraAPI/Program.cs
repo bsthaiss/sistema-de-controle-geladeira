@@ -1,6 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Repository.Context;
+using Repository.Interfaces;
+using Repository.Models;
+using Repository.RepositoriesClasses;
 using Services;
+using Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +19,8 @@ builder.Services.AddDbContext<GeladeiraDbContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-builder.Services.AddScoped<GeladeiraService>();
+builder.Services.AddScoped<IService<ItensGeladeira>, GeladeiraService>();
+builder.Services.AddScoped<IRepository<ItensGeladeira>, ItensGeladeiraRepository>();
 
 var app = builder.Build();
 

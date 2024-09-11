@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Repository.Models;
-using Services;
+using Services.Interfaces;
 
 /*
     Nome: Thais Barbosa dos Santos
@@ -12,9 +12,9 @@ namespace GeladeiraAPI.Controllers
     [ApiController]
     public class GeladeiraController : ControllerBase
     {
-        private readonly GeladeiraService _service;
+        IService<ItensGeladeira> _service;
 
-        public GeladeiraController(GeladeiraService service)
+        public GeladeiraController(IService<ItensGeladeira> service)
         {
             _service = service;
         }
@@ -22,14 +22,13 @@ namespace GeladeiraAPI.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<ItensGeladeira>> Get()
         {
-            var itens = _service.ListarTodosItens();
-            return Ok(itens);
+            return _service.ListarTodos();
         }
 
         [HttpGet("{id}")]
         public ActionResult<ItensGeladeira> Get(int id)
         {
-            var item = _service.BuscarItem(id);
+            var item = _service.Buscar(id);
 
             if (item == null)
             {
@@ -47,7 +46,7 @@ namespace GeladeiraAPI.Controllers
                 return BadRequest("Erro!");
             }
 
-            _service.AdicionarItem(item);
+            _service.Adicionar(item);
             return Ok("Item adicionado com sucesso");
         }
 
@@ -60,14 +59,14 @@ namespace GeladeiraAPI.Controllers
                 return BadRequest("Erro! Item inválido");
             }
 
-            var itemExiste = _service.BuscarItem(id);
+            var itemExiste = _service.Buscar(id);
 
             if (itemExiste == null)
             {
                 return NotFound();
             }
 
-            _service.AtualizarItem(item);
+            _service.Atualizar(item);
             return Ok("Item atualizado com sucesso");
 
 
@@ -76,16 +75,15 @@ namespace GeladeiraAPI.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            var itemExiste = _service.BuscarItem(id);
+            var itemExiste = _service.Buscar(id);
 
             if (itemExiste == null)
             {
                 return NotFound();
             }
 
-            _service.RemoverItem(id);
+            _service.Remover(id);
             return Ok("Item removido com sucesso");
-
         }
 
     }

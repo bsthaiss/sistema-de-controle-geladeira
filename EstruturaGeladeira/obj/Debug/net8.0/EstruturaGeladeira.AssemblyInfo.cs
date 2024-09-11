@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EstruturaGeladeira")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ccc6c9684ed2e3f7f8ce363864fb35b55294858")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa5876cb5862dde67e33d5ec4b81ee2e995381fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("EstruturaGeladeira")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EstruturaGeladeira")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

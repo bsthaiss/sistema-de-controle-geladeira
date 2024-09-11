@@ -1,57 +1,44 @@
 ﻿using Repository.Context;
+using Repository.Interfaces;
 using Repository.Models;
+using Services.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Services
 {
-    public class GeladeiraService
+    public class GeladeiraService : IService<ItensGeladeira>
     {
-        private readonly GeladeiraDbContext _contexto;
+        private readonly IRepository<ItensGeladeira> _repository;
 
-        public GeladeiraService(GeladeiraDbContext contexto)
+        public GeladeiraService(IRepository<ItensGeladeira> repository)
         {
-            _contexto = contexto;
+            _repository = repository;
         }
 
-        public IEnumerable<ItensGeladeira> ListarTodosItens()
+        public List<ItensGeladeira> ListarTodos()
         {
-            return _contexto.ItensGeladeiras.ToList();
+            return _repository.ListarTodos();
         }
 
-        public ItensGeladeira? BuscarItem(int id)
+        public ItensGeladeira? Buscar(int id)
         {
-            return _contexto.ItensGeladeiras.Find(id);
+            return _repository.Buscar(id);
         }
 
-        public void AdicionarItem(ItensGeladeira item)
+        public void Adicionar(ItensGeladeira entity)
         {
-            _contexto.ItensGeladeiras.Add(item);
-            _contexto.SaveChanges();
+            _repository.Adicionar(entity);
         }
 
-        public void AtualizarItem(ItensGeladeira itemAtualizado)
+        public void Atualizar(ItensGeladeira entity)
         {
-            var itemExistente = _contexto.ItensGeladeiras.Find(itemAtualizado.Id);
-
-            if (itemExistente != null)
-            {
-                itemExistente.Nome = itemAtualizado.Nome;
-                itemExistente.Andar = itemAtualizado.Andar;
-                itemExistente.Container = itemAtualizado.Container;
-                itemExistente.Posicao = itemAtualizado.Posicao;
-                _contexto.SaveChanges();
-            }
+            _repository.Atualizar(entity);
         }
 
-        public void RemoverItem(int id)
+        public void Remover(int id)
         {
-            var item = _contexto.ItensGeladeiras.Find(id);
-            if (item != null)
-            {
-                _contexto.ItensGeladeiras.Remove(item);
-                _contexto.SaveChanges();
-            }
+            _repository.Remover(id);
         }
     }
 }
