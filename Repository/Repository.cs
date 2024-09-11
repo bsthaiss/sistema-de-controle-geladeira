@@ -24,8 +24,17 @@ namespace Repository.RepositoriesClasses
 
         public void Atualizar(ItensGeladeira entity)
         {
-            _context.Update(entity);
-            _context.SaveChanges();
+            var entityExiste = _context.ItensGeladeiras.Find(entity.Id);
+
+            if (entityExiste != null)
+            {
+                entityExiste.Nome = entity.Nome;
+                entityExiste.Andar = entity.Andar;
+                entityExiste.Container = entity.Container;
+                entityExiste.Posicao = entity.Posicao;
+
+                _context.SaveChanges();
+            }
         }
 
         public ItensGeladeira? Buscar(int id)

@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7ADA13-8F4B-499F-92AE-7E606A21C7B0}|GeladeiraAPI\\GeladeiraAPI.csproj|c:\\users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\geladeiraapi\\controllers\\geladeiracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7ADA13-8F4B-499F-92AE-7E606A21C7B0}|GeladeiraAPI\\GeladeiraAPI.csproj|solutionrelative:geladeiraapi\\controllers\\geladeiracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +27,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GeladeiraController.cs",
+              "DocumentMoniker": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\GeladeiraAPI\\Controllers\\GeladeiraController.cs",
+              "RelativeDocumentMoniker": "GeladeiraAPI\\Controllers\\GeladeiraController.cs",
+              "ToolTip": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\GeladeiraAPI\\Controllers\\GeladeiraController.cs",
+              "RelativeToolTip": "GeladeiraAPI\\Controllers\\GeladeiraController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAFIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T21:21:08.636Z",
+              "EditorCaption": ""
             }
           ]
         }
