@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Repository.Models;
 
-namespace Repository.Models;
+namespace Repository.Context;
 
 public partial class GeladeiraDbContext : DbContext
 {
