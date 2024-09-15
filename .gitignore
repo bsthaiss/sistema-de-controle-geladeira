@@ -37,7 +37,8 @@ Repository/bin/
 Services/bin/
 
 # Visual Studio cache
-.vs/
+.vs
+/.vs/
 
 # MSTest test results
 [Tt]est[Rr]esult*/
