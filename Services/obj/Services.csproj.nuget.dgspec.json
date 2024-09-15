@@ -179,6 +179,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\EstruturaGeladeira\\EstruturaGeladeira.csproj": {
+                "projectPath": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\EstruturaGeladeira\\EstruturaGeladeira.csproj"
+              },
               "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\Repository\\Repository.csproj": {
                 "projectPath": "C:\\Users\\rosin\\source\\repos\\sistema-de-controle-geladeira\\Repository\\Repository.csproj"
               }

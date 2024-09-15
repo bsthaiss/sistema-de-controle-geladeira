@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Repository.Models;
 using Services.Interfaces;
+using EstruturaGeladeira;
 
 /*
     Nome: Thais Barbosa dos Santos

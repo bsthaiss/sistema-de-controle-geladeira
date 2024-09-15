@@ -5,6 +5,7 @@ using Repository.Context;
 using Repository.Interfaces;
 using Repository.Models;
 using Microsoft.Data.SqlClient;
+using EstruturaGeladeira;
 
 namespace Repository.RepositoriesClasses
 {

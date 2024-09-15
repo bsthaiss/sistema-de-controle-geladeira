@@ -54,12 +54,21 @@ class Program
 
     static void AdicionarItem(Geladeira geladeira, int andar, int container, int posicao, string item)
     {
-        geladeira.Andares[andar].AdicionarItem(container, posicao, item);
+        geladeira.Andares[andar].Containers[container].Itens[posicao] = item;
     }
 
     static void ListarItens(Geladeira geladeira)
     {
         Console.WriteLine("Itens na geladeira:");
-        geladeira.ListarItens();
+        foreach (var andar in geladeira.Andares)
+        {
+            foreach (var container in andar.Containers)
+            {
+                foreach (var item in container.Itens)
+                {
+                    Console.WriteLine(item ?? null);
+                }
+            }
+        }
     }
 }
