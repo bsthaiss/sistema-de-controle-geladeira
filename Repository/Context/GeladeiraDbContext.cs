@@ -17,6 +17,7 @@ public partial class GeladeiraDbContext : DbContext
     }
 
     public virtual DbSet<ItensGeladeira> ItensGeladeiras { get; set; }
+    public virtual DbSet<Usuario> Usuarios { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -27,6 +28,27 @@ public partial class GeladeiraDbContext : DbContext
             entity.ToTable("ItensGeladeira");
 
             entity.Property(e => e.Nome)
+                .HasMaxLength(100)
+                .IsUnicode(false);
+        });
+
+        modelBuilder.Entity<Usuario>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_User");
+
+            entity.ToTable("Usuario");
+
+            entity.Property(e => e.Id).HasColumnName("ID");
+
+            entity.Property(e => e.SenhaHash)
+                .HasMaxLength(300)
+                .IsUnicode(false);
+
+            entity.Property(e => e.SenhaSalt)
+                .HasMaxLength(100)
+                .IsUnicode(false);
+
+            entity.Property(e => e.UserName)
                 .HasMaxLength(100)
                 .IsUnicode(false);
         });

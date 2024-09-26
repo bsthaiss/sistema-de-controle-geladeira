@@ -22,6 +22,9 @@ builder.Services.AddDbContext<GeladeiraDbContext>(options => {
 builder.Services.AddScoped<IService<ItensGeladeira>, GeladeiraService>();
 builder.Services.AddScoped<IRepository<ItensGeladeira>, ItensGeladeiraRepository>();
 
+builder.Services.AddScoped<LoginService>();
+builder.Services.AddScoped<TokenService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
